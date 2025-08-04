@@ -5,16 +5,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   basePath: '/project',
+  assetPrefix: '/project/',
   
   // Оптимизация изображений
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'vavbeat.github.io',
-      },
-    ],
+    path: '/project',
   },
 
   // Оптимизация производительности

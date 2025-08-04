@@ -13,7 +13,7 @@ const team = [
     position: 'SEO/AI/SMM Лидер',
     experience: '19 лет опыта',
     specialization: 'Автоматизация, AI-инструменты, data-driven SMM',
-    image: '/team/evgeniy.jpg',
+    image: '/project/team/evgeniy.jpg',
     achievements: [
       'Вывела МакSim до 1 млн копий альбома',
       'Запустила IVR-системы с Rambler Group',
@@ -41,7 +41,7 @@ const team = [
     position: 'CTO AI/ML/Product Development',
     experience: '6+ лет опыта',
     specialization: 'Data Science, Machine Learning, Full-stack разработка',
-    image: '/team/alexandr.jpg',
+    image: '/project/team/alexandr.jpg',
     achievements: [
       'Медицинские приложения: +13% удержание пользователей',
       'ML-модели с улучшением конверсии на +42%',
@@ -101,9 +101,10 @@ export function Team() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                                   <div className="relative w-full h-[300px]">
                   <img 
-                    src={member.image} 
+                    src={`${member.image}`} 
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 via-gray-700/50 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
