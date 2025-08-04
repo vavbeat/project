@@ -5,8 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Award, Brain, Target } from 'lucide-react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { TeamImage } from '@/components/ui/team-image';
 
 const team = [
   {
@@ -100,15 +99,13 @@ export function Team() {
               <Card className="h-full bg-white shadow-md hover:shadow-lg transition-all duration-500 border border-gray-100 overflow-hidden">
                 {/* Photo Section */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image 
+                                  <div className="relative w-full h-[300px]">
+                  <img 
                     src={member.image} 
                     alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                    priority={index === 0}
-                    quality={90}
+                    className="w-full h-full object-cover"
                   />
+                </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 via-gray-700/50 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-2xl font-bold text-gray-50 mb-1">{member.name}</h3>

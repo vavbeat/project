@@ -9,8 +9,13 @@ const nextConfig = {
   // Оптимизация изображений
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'vavbeat.github.io',
+      },
+    ],
   },
-  assetPrefix: '/project',
 
   // Оптимизация производительности
   compiler: {
