@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll"
+    "deploy": "next build && touch out/.nojekyll && cp out/404.html out/not-found.html"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

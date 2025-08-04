@@ -4,10 +4,11 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/ВАШ_РЕПОЗИТОРИЙ',
   
   // Оптимизация изображений
   images: {
-    domains: ['localhost'],
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
