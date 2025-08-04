@@ -4,7 +4,7 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/ВАШ_РЕПОЗИТОРИЙ',
+  basePath: '/project',
   
   // Оптимизация изображений
   images: {
@@ -22,11 +22,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 
-  // Оптимизация для поисковых систем
-  i18n: {
-    locales: ['ru'],
-    defaultLocale: 'ru',
-  },
 };
 
 module.exports = nextConfig;
