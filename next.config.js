@@ -9,12 +9,8 @@ const nextConfig = {
   // Оптимизация изображений
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    loader: 'custom',
+    loaderFile: './image-loader.js',
   },
 
   // Оптимизация производительности
