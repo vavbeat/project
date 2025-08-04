@@ -13,7 +13,7 @@ const team = [
     position: 'SEO/AI/SMM Лидер',
     experience: '19 лет опыта',
     specialization: 'Автоматизация, AI-инструменты, data-driven SMM',
-    image: '/photo/evgeniy.jpg',
+    image: '/images/evgeniy.jpg',
     achievements: [
       'Вывела МакSim до 1 млн копий альбома',
       'Запустила IVR-системы с Rambler Group',
@@ -41,7 +41,7 @@ const team = [
     position: 'CTO AI/ML/Product Development',
     experience: '6+ лет опыта',
     specialization: 'Data Science, Machine Learning, Full-stack разработка',
-    image: '/photo/alexandr.jpg',
+    image: '/images/alexandr.jpg',
     achievements: [
       'Медицинские приложения: +13% удержание пользователей',
       'ML-модели с улучшением конверсии на +42%',
