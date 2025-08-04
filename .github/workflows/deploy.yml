@@ -12,6 +12,10 @@ permissions:
   issues: write
   pull-requests: write
 
+env:
+  NODE_VERSION: '18'
+  FORCE_COLOR: true
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
