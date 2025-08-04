@@ -9,9 +9,8 @@ const nextConfig = {
   // Оптимизация изображений
   images: {
     unoptimized: true,
-    loader: 'custom',
-    loaderFile: './image-loader.js',
   },
+  assetPrefix: '/project',
 
   // Оптимизация производительности
   compiler: {
