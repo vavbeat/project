@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Award, Brain, Target } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const team = [
   {
@@ -13,7 +14,7 @@ const team = [
     position: 'SEO/AI/SMM Лидер',
     experience: '19 лет опыта',
     specialization: 'Автоматизация, AI-инструменты, data-driven SMM',
-    image: '/images/evgeniy.jpg',
+    image: '/team/evgeniy.jpg',
     achievements: [
       'Вывела МакSim до 1 млн копий альбома',
       'Запустила IVR-системы с Rambler Group',
@@ -41,7 +42,7 @@ const team = [
     position: 'CTO AI/ML/Product Development',
     experience: '6+ лет опыта',
     specialization: 'Data Science, Machine Learning, Full-stack разработка',
-    image: '/images/alexandr.jpg',
+    image: '/team/alexandr.jpg',
     achievements: [
       'Медицинские приложения: +13% удержание пользователей',
       'ML-модели с улучшением конверсии на +42%',
