@@ -1,34 +1,61 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MessageCircle, Award, Brain, Target } from 'lucide-react';
+import { MessageCircle, Award, Brain, Target, ChevronDown, ChevronUp } from 'lucide-react';
 import { TeamImage } from '@/components/ui/team-image';
+import { useState } from 'react';
 
 const team = [
   {
     name: 'Евгения Страусова',
-    position: 'SEO/AI/SMM Лидер',
+    position: 'CEO AI SMM',
     experience: '19 лет опыта',
-    specialization: 'Автоматизация, AI-инструменты, data-driven SMM',
+    specialization: 'Управление проектами, автоматизация, маркетинг, SMM',
     image: '/project/team/evgeniy.jpg',
     achievements: [
-      'Вывела МакSim до 1 млн копий альбома',
-      'Запустила IVR-системы с Rambler Group',
-      'Масштабировала мобильный маркетинг для федеральных проектов',
-      'PR-кампании для "С-Медиа" с тиражом 1.7 млн',
-      'Управление проектами с 800k UU в сутки (paparazzi.ru)'
+      '2006 г.-Менеджер певицы МакSим с нуля до первого миллиона проданных лицензионных копий',
+      '2008 г.- Rambler&Co организовала и масштабировала подразделение Мобильного маркетинга. WAP-IVR проект «NEWMEDIASTARS» - кросс промо российских артистов. Прибыльность 20 000$ мес.(1 проект/артист| месяц после старта)',
+      '2008-2010 г. ИД С-медиа Head of PR и маркетинга ИД. «Папарацци», paparazzi.ru– о журнал о частной жизни знаменитостей. Сделала с нуля и в Декабре 2010 г. ежемесячный тираж составляет 1 700 000 экз/мес. Декабрь 2010 года- посещаемость сайта www.paparazzi.ru 100 000 чел/ день (TNS Gallup)',
+      '2008-2010 г. PR-директор «Красный квадрат», ООО. 1 канал Останкино. www.red-red.ru ТВ продакшн федеральных телеканалов. Создание, упаковка запуск digital-проектов одноименных ТВ программ: «Минута славы», «Контрольная закупка», «Фабрика звезд», «20 лучших песен», «Давай поженимся» и др. Cобрана самая крупная правовая база отечественной музыки в стране, 1 канал- одноименная ТВ программа в prime time',
+      '2013 —2015 ИД "Семь дней" Руководитель отдела маркетинга. Запуск цифровой трансформации ИД. Интернет-портал www.7days.ru. 800 000 уникальных пользователей в сутки через полгода после старта. Вывод в январе 2015 года. Создание сети региональных СМИ под эгидой бренда',
+      '2016-2018 Е-Генератор РА, холдинг Финам. Директор по развитию бизнеса. Позиционирование, вывод на рынок тизерной сетки Миртесен с нуля. Рост трафика (подключение 500 топ-площадок Рунета в течении 1 года). Проекты-партнеры сети в течении года: Партия "Единая Россия", Портал "Госуслуги", Партия "Парнас", Рбк, Рамблер и др',
+      '2019-2025 Вывод на рынок новых проектов в сферах luxe resale (одежда, ювелирка, сумки, обувь)'
     ],
     competencies: [
-      'SEO-стратегии',
-      'AI-аналитика',
-      'SMM growth-hacking',
-      'Автоматизация процессов',
-      'Data-driven маркетинг',
-      'Performance Marketing'
+      'Позиционирование',
+      'Упаковка',
+      'Маркетинг с нуля',
+      'Управление кросс-функциональными командами',
+      'Data-driven и performance-подходы',
+      'Интеграция контент-маркетинга, SEO, SMM, email и рекламных инструментов',
+      'Стратегическое мышление',
+      'Креативность',
+      'Ориентация на результат'
     ],
+    detailedInfo: `CEO AI SMM
+
+Специализация: управление проектами, автоматизация, маркетинг, SMM
+
+Компетенции: Позиционирование, упаковка, маркетинг с нуля, управляю кросс-функциональными командами и внедряю data-driven и performance-подходы. Экспертиза в интеграции контент-маркетинга, SEO, SMM, email и рекламных инструментов в единую экосистему цифровых коммуникаций. Стратегическое мышление, креативность и ориентация на результат, трансформирую бренд-коммуникации и достигаю бизнес-целей. Объединяю лидерство, технологическую экспертизу, автоматизацию и понимание аудитории, масштабирую цифровое влияние брендов.
+
+Достижения:
+
+2006 г.-Менеджер певицы МакSим с нуля до первого миллиона проданных лицензионных копий 
+
+2008 г.- Rambler&Co организовала и масштабировала подразделение Мобильного маркетинга. WAP-IVR проект «NEWMEDIASTARS» - кросс промо российских артистов. Прибыльность 20 000$ мес.(1 проект/артист| месяц после старта) 
+
+2008-2010 г. ИД С-медиа Head of PR и маркетинга ИД. «Папарацци», paparazzi.ru– о журнал о частной жизни знаменитостей. Сделала с нуля и в Декабре 2010 г. ежемесячный тираж составляет 1 700 000 экз/мес. Декабрь 2010 года- посещаемость сайта www.paparazzi.ru 100 000 чел/ день (TNS Gallup). 
+
+2008-2010 г. PR-директор «Красный квадрат», ООО. 1 канал Останкино. www.red-red.ru ТВ продакшн федеральных телеканалов. Создание, упаковка запуск digital-проектов одноименных ТВ программ: «Минута славы», «Контрольная закупка», «Фабрика звезд», «20 лучших песен», «Давай поженимся» и др. Cобрана самая крупная правовая база отечественной музыки в стране, 1 канал- одноименная ТВ программа в prime time. Прямое подчинение Курпатову А.В.- прямое подчинение Эрнст К.Л.
+
+2013 —2015 ИД "Семь дней" Руководитель отдела маркетинга. Запуск цифровой трансформации ИД. Интернет-портал www.7days.ru. 800 000 уникальных пользователей в сутки через полгода после старта. Вывод в январе 2015 года. Создание сети региональных СМИ под эгидой бренда.
+
+2016-2018 Е-Генератор РА, холдинг Финам. Директор по развитию бизнеса. Позиционирование, вывод на рынок тизерной сетки Миртесен с нуля. Рост трафика (подключение 500 топ-площадок Рунета в течении 1 года). Проекты-партнеры сети в течении года: Партия "Единая Россия", Портал "Госуслуги", Партия "Парнас", Рбк, Рамблер и др.
+
+2019-2025 Вывод на рынок новых проектов в сферах luxe resale (одежда, ювелирка, сумки, обувь)`,
     contact: '@strausova_evgenia',
     stats: {
       projects: '200+',
@@ -67,6 +94,12 @@ const team = [
 ];
 
 export function Team() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section id="team" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,12 +131,12 @@ export function Team() {
             >
               <Card className="h-full bg-white shadow-md hover:shadow-lg transition-all duration-500 border border-gray-100 overflow-hidden">
                 {/* Photo Section */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                                  <div className="relative w-full h-[300px]">
+                <div className="relative w-full overflow-hidden">
+                  <div className="relative w-full h-[350px]">
                   <img 
                     src={`${member.image}`} 
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-4"
                     loading="lazy"
                   />
                 </div>
@@ -190,6 +223,40 @@ export function Team() {
                       </div>
                     ))}
                   </div>
+
+                  {/* Expandable Detailed Info Button for Evgenia Strousova */}
+                  {index === 0 && member.detailedInfo && (
+                    <div className="pt-4">
+                      <Button
+                        onClick={() => toggleExpand(index)}
+                        variant="outline"
+                        className="w-full flex items-center justify-between gap-2"
+                      >
+                        <span>Подробнее о специалисте</span>
+                        {expandedIndex === index ? (
+                          <ChevronUp className="w-4 h-4" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4" />
+                        )}
+                      </Button>
+                      
+                      <AnimatePresence>
+                        {expandedIndex === index && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 overflow-hidden"
+                          >
+                            <pre className="whitespace-pre-wrap text-sm text-gray-700 font-sans">
+                              {member.detailedInfo}
+                            </pre>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
 
                   {/* Telegram Button */}
                   <div className="pt-4">
