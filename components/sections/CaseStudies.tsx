@@ -119,7 +119,7 @@ export function CaseStudies() {
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeCase === index
-                  ? 'bg-gradient-peach text-white shadow-lg'
+                  ? 'bg-gradient-peach text-charcoal-800 shadow-lg'
                   : 'bg-white text-charcoal-700 hover:bg-primary-50 shadow-md'
               }`}
             >
