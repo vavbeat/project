@@ -151,13 +151,13 @@ export function Advantages() {
             <p className="text-lg text-charcoal-700 mb-6">
               Присоединяйтесь к революции искусственного интеллекта в социальных медиа
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-peach text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Запустить AI SMM прямо сейчас
-            </motion.button>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="px-8 py-4 bg-gradient-peach text-charcoal-800 font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                            >
+                              Запустить AI SMM прямо сейчас
+                            </motion.button>
           </Card>
         </motion.div>
       </div>

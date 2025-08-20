@@ -96,7 +96,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="gradient-peach text-white hover:shadow-2xl hover:scale-105 transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl"
+              className="gradient-peach text-charcoal-800 hover:shadow-2xl hover:scale-105 transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl"
             >
               Получить консультацию
               <ArrowRight className="ml-2 w-5 h-5" />

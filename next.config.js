@@ -10,7 +10,6 @@ const nextConfig = {
   // Оптимизация изображений
   images: {
     unoptimized: true,
-    path: '/project',
   },
 
   // Оптимизация производительности

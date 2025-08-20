@@ -5,7 +5,6 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Award, Brain, Target, ChevronDown, ChevronUp } from 'lucide-react';
-import { TeamImage } from '@/components/ui/team-image';
 import { useState } from 'react';
 
 const team = [
@@ -14,7 +13,7 @@ const team = [
     position: 'CEO AI SMM',
     experience: '19 лет опыта',
     specialization: 'Управление проектами, автоматизация, маркетинг, SMM',
-    image: '/project/team/evgeniy.jpg',
+    image: '/project/images/evgenia.jpg',
     achievements: [
       '2006 г.-Менеджер певицы МакSим с нуля до первого миллиона проданных лицензионных копий',
       '2008 г.- Rambler&Co организовала и масштабировала подразделение Мобильного маркетинга. WAP-IVR проект «NEWMEDIASTARS» - кросс промо российских артистов. Прибыльность 20 000$ мес.(1 проект/артист| месяц после старта)',
@@ -68,7 +67,7 @@ const team = [
     position: 'CTO AI/ML/Product Development',
     experience: '6+ лет опыта',
     specialization: 'Data Science, Machine Learning, Full-stack разработка',
-    image: '/project/team/alexandr.jpg',
+    image: '/project/images/alexandr.png',
     achievements: [
       'Медицинские приложения: +13% удержание пользователей',
       'ML-модели с улучшением конверсии на +42%',
