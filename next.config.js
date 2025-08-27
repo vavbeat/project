@@ -4,8 +4,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/project',
-  assetPrefix: '/project/',
+  basePath: '',
+  assetPrefix: '',
   
   // Оптимизация изображений
   images: {
