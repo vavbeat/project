@@ -1,0 +1,21 @@
+# Video Placeholder for GitHub Pages Deployment
+
+This is a temporary placeholder for video files.
+The actual video files should be placed here when available.
+
+## Video Files Needed:
+- Art_Futurology_optimized.mp4
+- FMCG_Perfumery_Image_optimized.mp4  
+- Pushkin_Simple_optimized.mp4
+- Sports_Unexpected_Combination_optimized.mp4
+
+## Instructions:
+1. Replace these placeholder files with actual video content
+2. Ensure videos are optimized for web (max 50MB each)
+3. Use H.264 codec for better compatibility
+4. Test videos work on GitHub Pages before deployment
+
+## Current Status:
+- All video files are empty (0 bytes)
+- This is causing loading issues on GitHub Pages
+- Images are working correctly
