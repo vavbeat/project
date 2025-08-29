@@ -1,36 +1,167 @@
+/* Video Fix Styles for GitHub Pages */
+/* Стили для исправления видео на GitHub Pages */
 
-/* Стиль для скрытия ошибок загрузки видео */
+/* Стили для плейсхолдера ошибки видео */
+.video-error-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 200px;
+    transition: all 0.3s ease;
+}
+
+.video-error-placeholder:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-error-placeholder svg {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.video-error-placeholder p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.video-error-placeholder p:last-child {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Стили для контейнеров видео */
 .video-container {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
 }
 
 .video-container video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
-/* Стиль для плейсхолдера видео */
-.video-placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 14px;
-  text-align: center;
-  padding: 20px;
+.video-container .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
 }
 
-.video-placeholder .icon {
-  font-size: 48px;
-  margin-bottom: 10px;
-  opacity: 0.5;
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+
+.video-overlay .play-button {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.video-overlay .play-button:hover {
+    transform: scale(1.1);
+}
+
+.video-overlay .play-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    margin-left: 4px;
+}
+
+/* Стили для загрузки видео */
+.video-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.video-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .video-error-placeholder {
+        min-height: 150px;
+        padding: 15px;
+    }
+    
+    .video-error-placeholder svg {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+    }
+    
+    .video-error-placeholder p {
+        font-size: 12px;
+    }
+    
+    .video-error-placeholder p:last-child {
+        font-size: 10px;
+    }
+    
+    .video-container {
+        border-radius: 8px;
+    }
+    
+    .video-container .video-overlay .play-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Стили для темной темы */
+@media (prefers-color-scheme: dark) {
+    .video-container {
+        background: #2d3748;
+    }
+    
+    .video-loading {
+        background: #2d3748;
+    }
 }
