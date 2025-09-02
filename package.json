@@ -1,0 +1,18 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "scripts": {
+    "optimize:videos": "node scripts/prepare-videos.js",
+    "deploy": "npm run build && npm run optimize:videos && git add . && git commit -m 'Optimized videos and deployed' && git push",
+    "start": "next",
+    "build": "next build",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "ffmpeg": "^4.3.1",
+    "next": "^12.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {}
+}

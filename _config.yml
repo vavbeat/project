@@ -1,0 +1,14 @@
+# Enable image optimization
+image_optimization:
+  enable: true
+  quality: "80"
+  compression: " deflate"
+  progressive: false
+
+# Enable lazy loading for images
+plugins:
+  - jekyll-lazy-load-image
+
+# Exclude optimized images from being shown in the front matter
+exclude:
+  - "images/*"
